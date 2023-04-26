@@ -27,7 +27,7 @@ class Student {
       'age': age,
       'nameCourses': nameCourses,
       'courses': courses.map((course) => course.toMap()).toList(),
-      'address': address,
+      'address': address.toMap(),
     };
   }
 
@@ -35,9 +35,9 @@ class Student {
 
   factory Student.fromMap(Map<String, dynamic> map) {
     return Student(
-      id: map['id'],
-      name: map['name'],
-      age: map['age'],
+      id: map['id'] ?? 0,
+      name: map['name'] ?? '',
+      age: map['age'] ?? 1,
       nameCourses: List<String>.from(map['nameCourses'] ?? <String>[]),
       address: Address.fromMap(map['address'] ?? <String, dynamic>{}),
       courses: map['courses']
