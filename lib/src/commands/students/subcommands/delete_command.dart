@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:args/command_runner.dart';
 
-import '../../../repositories/student_repository.dart';
+import '../../../repositories/student_dio_repository.dart';
 
 class DeleteCommand extends Command {
-  StudentRepository studentRepository;
+  StudentDioRepository studentRepository;
 
   @override
   String get description => 'Delete Student by Id';

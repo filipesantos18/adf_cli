@@ -6,12 +6,12 @@ import '../../../models/address.dart';
 import '../../../models/city.dart';
 import '../../../models/phone.dart';
 import '../../../models/student.dart';
-import '../../../repositories/product_repository.dart';
-import '../../../repositories/student_repository.dart';
+import '../../../repositories/product_dio_repository.dart';
+import '../../../repositories/student_dio_repository.dart';
 
 class UpdateCommand extends Command {
-  StudentRepository studentRepository;
-  final productRepository = ProductRepository();
+  StudentDioRepository studentRepository;
+  final productRepository = ProductDioRepository();
 
   @override
   String get description => 'Update Student';
